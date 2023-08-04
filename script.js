@@ -10,7 +10,7 @@ let foodX, foodY;
 let snakeX = 5, snakeY = 5;
 let snakeBody = [];
 let velocityX = 0, velocityY = 0;
-let setIntervalId; 
+let setIntervalId;
 let score = 0;
 
 //Getting high score from the local storage
@@ -26,6 +26,7 @@ const changeFoodPosition = () => {
 }
 
 const handleGameOver = () => {
+    gameOVer = false;
     //Clearing the timer and reloading the page on game over
     clearInterval(setIntervalId);
     alert("Game Over! Press OK to replay...");
@@ -117,5 +118,5 @@ const initGame = () => {
 }
 
 changeFoodPosition();
-setInterval(initGame, 125);
-document.addEventListener("keydown", changeDirection);
+setInterval(initGame, 100);
+document.addEventListener("keyup", changeDirection);
