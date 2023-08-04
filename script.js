@@ -26,11 +26,11 @@ const changeFoodPosition = () => {
 }
 
 const handleGameOver = () => {
-    gameOVer = false;
     //Clearing the timer and reloading the page on game over
     clearInterval(setIntervalId);
     alert("Game Over! Press OK to replay...");
     location.reload();
+    gameOVer = false;
 }
 
 const changeDirection = (e) => {
